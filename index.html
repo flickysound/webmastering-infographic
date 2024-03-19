@@ -1,0 +1,380 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Webmastering</title>
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Ubuntu+Condensed&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <!-- stylesheet -->
+        <style>
+            /* declare fonts */
+            h1, h2, h3, h4, h5, h6, p, a, li {
+                font-family: "Ubuntu", sans-serif;
+            }
+            /* element declarations */
+            html, body {
+                display: block;
+                margin: 0;
+                height: 100%;
+                width: 100%;
+                background-size: cover;
+                display: flex;
+                justify-content: center;
+                align-items: top;
+                background-color: black;
+            }
+            ul {
+                list-style-type: none;
+                padding-left: 0px;
+            }
+            li {
+                padding-bottom: 10px;
+            }
+            /* classes */
+            .flex {
+                /* used to display elements horizontally */
+                display: flex;
+            }
+            .main {
+                /* controls main div element */
+                background-color: #ffffff;
+                border-radius: 20px;
+                width: 70%;
+                height: fit-content;
+            }
+            .content {
+                /* extra container inside main div */
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            /* ids */
+            #condensed {
+                /* secondary heading */
+                font-family: "Ubuntu Condensed", sans-serif;
+            }
+            #main-heading {
+                /* main title */
+                font-family: "Madimi One", sans-serif;
+            }
+            /* background shader */
+            html {
+                font: 5vmin/1.3 Serif;
+                overflow: hidden;
+                background: #123;
+            }
+            body, head {
+                display: block;
+                font-size: 52px;
+                color: transparent;
+            }
+
+            head::before, head::after, body::before, body::after {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                width: 3em;
+                height: 3em;
+                content: ".";
+                mix-blend-mode: screen;
+                animation: 44s -27s move infinite ease-in-out alternate;
+            }
+
+            body::before {
+                /* compiled scss (scss is a css preprocessor) */
+                /* @include dots(40); */
+                text-shadow: 
+                    0.6565654424em 2.4264965195em 8px rgba(255, 254, 0, 0.9), 
+                    0.0109139574em -0.0875069608em 8px rgba(255, 0, 242, 0.9), 
+                    1.452481623em 1.4021353097em 8px rgba(146, 0, 255, 0.9), 
+                    2.2982705455em -0.396759935em 8px rgba(0, 82, 255, 0.9), 
+                    0.1238248216em 0.2292932009em 8px rgba(255, 182, 0, 0.9), 
+                    1.5582290515em 1.7128814642em 8px rgba(59, 0, 255, 0.9), 
+                    0.4853350028em 0.5070889149em 8px rgba(52, 0, 255, 0.9), 
+                    -0.2566399764em 2.3211243178em 8px rgba(147, 0, 255, 0.9),
+                    0.5810830961em 1.5973033355em 8px rgba(0, 255, 134, 0.9), 
+                    1.85975387em -0.2109166167em 8px rgba(0, 18, 255, 0.9), 
+                    0.626856758em -0.4231658859em 8px rgba(156, 255, 0, 0.9), 
+                    0.9834444272em 0.5836843611em 8px rgba(0, 159, 255, 0.9), 
+                    0.7281283056em 2.3623515543em 8px rgba(158, 255, 0, 0.9), 
+                    1.1518853637em 0.4860218347em 8px rgba(0, 165, 255, 0.9), 
+                    1.9453777737em -0.3847657428em 8px rgba(255, 13, 0, 0.9), 
+                    0.3486402978em 0.2428132741em 8px rgba(255, 43, 0, 0.9), 
+                    -0.4756726404em 1.527509209em 8px rgba(105, 255, 0, 0.9), 
+                    0.4920438748em 1.3597341318em 8px rgba(0, 255, 39, 0.9), 
+                    1.1408872439em 1.7182542381em 8px rgba(255, 0, 134, 0.9), 
+                    2.2785849782em 1.102404075em 8px rgba(25, 255, 0, 0.9), 
+                    0.4637615248em 0.305368762em 8px rgba(78, 0, 255, 0.9), 
+                    1.506833915em 0.5527900234em 8px rgba(0, 255, 182, 0.9), 
+                    0.9393389161em -0.3988467431em 8px rgba(78, 0, 255, 0.9), 
+                    0.0881918257em 2.4179059828em 8px rgba(0, 255, 244, 0.9), 
+                    0.1174519169em 1.4676688648em 8px rgba(255, 0, 151, 0.9), 
+                    0.0475906505em 0.615628573em 8px rgba(255, 0, 39, 0.9), 
+                    2.055643971em 0.913282164em 8px rgba(124, 0, 255, 0.9), 
+                    1.1937414437em 0.4195153884em 8px rgba(54, 0, 255, 0.9), 
+                    0.6857093325em 1.5621665029em 8px rgba(114, 255, 0, 0.9), 
+                    1.4991642041em 1.0392322856em 8px rgba(94, 0, 255, 0.9), 
+                    1.0694523114em 1.4956087776em 8px rgba(255, 114, 0, 0.9), 
+                    1.6610894219em 1.466699022em 8px rgba(141, 255, 0, 0.9), 
+                    1.2107386751em 0.2343822385em 8px rgba(0, 255, 159, 0.9), 
+                    0.8531215668em 1.6591788447em 8px rgba(0, 125, 255, 0.9), 
+                    1.9801152922em 2.1286880908em 8px rgba(56, 255, 0, 0.9), 
+                    -0.022444527em 1.5687373971em 8px rgba(255, 61, 0, 0.9), 
+                    1.683533789em 1.4180530586em 8px rgba(0, 3, 255, 0.9), 
+                    0.7647925799em 1.1473828442em 8px rgba(255, 110, 0, 0.9), 
+                    1.0610793025em 1.7732416411em 8px rgba(122, 255, 0, 0.9), 
+                    1.6409160676em 2.2076324466em 8px rgba(255, 0, 143, 0.9), 
+                    -0.4730680995em 0.9786408829em 8px rgba(255, 0, 180, 0.9);
+                animation-duration: 44s;
+                animation-delay: -27s;
+            }
+
+            body::after {
+                /* compiled scss */
+                /* @include dots(40); */
+                text-shadow: 
+                    0.3755834277em 0.2147737292em 8px rgba(255, 126, 0, 0.9), 
+                    1.4398152407em 1.2828268381em 8px rgba(141, 255, 0, 0.9), 
+                    1.2286691229em 1.710812237em 8px rgba(0, 255, 247, 0.9), 
+                    -0.1830781048em 1.5023032938em 8px rgba(255, 0, 81, 0.9), 
+                    1.8415508115em 0.5254526326em 8px rgba(205, 255, 0, 0.9), 
+                    0.1950355892em 2.1805156204em 8px rgba(255, 0, 44, 0.9), 
+                    1.5672931693em 0.0666400688em 8px rgba(0, 255, 135, 0.9), 
+                    2.4196147806em 1.0044235252em 8px rgba(72, 0, 255, 0.9), 
+                    -0.1552645548em -0.0021285389em 8px rgba(0, 139, 255, 0.9), 
+                    2.0225662343em 0.377075216em 8px rgba(0, 226, 255, 0.9), 
+                    0.9205625233em 2.3520940745em 8px rgba(255, 56, 0, 0.9), 
+                    1.8500747197em 2.338679863em 8px rgba(255, 64, 0, 0.9), 
+                    0.4374484002em -0.1709303801em 8px rgba(47, 0, 255, 0.9), 
+                    1.3904259425em 2.1012505789em 8px rgba(99, 0, 255, 0.9), 
+                    1.4187006133em 1.0645592022em 8px rgba(255, 0, 160, 0.9), 
+                    1.2320132509em 0.5600709345em 8px rgba(142, 255, 0, 0.9), 
+                    -0.2082706106em -0.3250176299em 8px rgba(6, 255, 0, 0.9), 
+                    1.139836723em -0.2950281593em 8px rgba(255, 154, 0, 0.9), 
+                    2.3382652921em -0.1201016443em 8px rgba(0, 255, 245, 0.9), 
+                    0.0566915669em -0.2915178835em 8px rgba(0, 255, 254, 0.9), 
+                    1.7455396003em 1.0883742382em 8px rgba(255, 0, 251, 0.9),
+                    0.3539002314em 0.2520977962em 8px rgba(0, 255, 173, 0.9), 
+                    1.338410979em 0.4980041024em 8px rgba(255, 226, 0, 0.9), 
+                    2.0544856764em 1.9532188812em 8px rgba(0, 255, 252, 0.9), 
+                    1.7159620799em 0.3562403482em 8px rgba(25, 0, 255, 0.9), 
+                    2.3834108363em 2.1649533749em 8px rgba(0, 255, 120, 0.9), 
+                    0.9820999936em 1.2105307078em 8px rgba(255, 132, 0, 0.9), 
+                    0.75170717em -0.0109966991em 8px rgba(133, 255, 0, 0.9), 
+                    0.4533233455em 0.5391128831em 8px rgba(83, 0, 255, 0.9), 
+                    0.402295354em 1.236143962em 8px rgba(255, 193, 0, 0.9), 
+                    2.2122123209em 1.2235511526em 8px rgba(186, 255, 0, 0.9), 
+                    0.4623207924em 0.4636880915em 8px rgba(0, 255, 164, 0.9), 
+                    0.1510994733em 2.2959306227em 8px rgba(0, 68, 255, 0.9), 
+                    0.2171369674em 1.9399016308em 8px rgba(0, 207, 255, 0.9), 
+                    -0.1418541874em 2.1897851644em 8px rgba(0, 255, 142, 0.9), 
+                    0.7206260721em 0.5004565647em 8px rgba(0, 72, 255, 0.9), 
+                    -0.2345866869em 1.6323269971em 8px rgba(239, 0, 255, 0.9), 
+                    0.681083565em 0.0355057509em 8px rgba(150, 255, 0, 0.9), 
+                    -0.2588154006em -0.1592957223em 8px rgba(255, 0, 194, 0.9), 
+                    0.2685628588em 0.4264474464em 8px rgba(33, 0, 255, 0.9), 
+                    2.2946111205em -0.19731905em 8px rgba(0, 161, 255, 0.9);
+                animation-duration: 43s;
+                animation-delay: -32s;
+            }
+            head::before {
+                /* compiled scss */
+                /* @include dots(40); */
+                text-shadow: 
+                    2.2520689078em -0.2266458479em 8px rgba(129, 255, 0, 0.9), 
+                    0.352371112em 0.7686530733em 8px rgba(155, 255, 0, 0.9), 
+                    0.1198268141em 0.4676724782em 8px rgba(255, 0, 10, 0.9), 
+                    2.1557811403em 0.5979845245em 8px rgba(130, 255, 0, 0.9), 
+                    1.332360027em 1.4685608207em 8px rgba(227, 255, 0, 0.9), 
+                    0.425225058em 1.7874385005em 8px rgba(238, 0, 255, 0.9), 
+                    1.9512156552em 0.0932281712em 8px rgba(255, 186, 0, 0.9), 
+                    1.5155089588em -0.4932252032em 8px rgba(255, 129, 0, 0.9), 
+                    -0.0195526212em 2.0944921524em 8px rgba(0, 155, 255, 0.9), 
+                    0.0546201652em -0.4283500697em 8px rgba(255, 125, 0, 0.9), 
+                    0.4228853081em 1.932239503em 8px rgba(0, 217, 255, 0.9), 
+                    1.6110383243em 1.6596025967em 8px rgba(36, 0, 255, 0.9), 
+                    0.9253245983em 1.4035427879em 8px rgba(0, 25, 255, 0.9), 
+                    0.4413331733em 0.0257436711em 8px rgba(0, 255, 147, 0.9), 
+                    0.7498325719em 2.4045558953em 8px rgba(187, 0, 255, 0.9), 
+                    1.3980715123em 0.6815331161em 8px rgba(0, 164, 255, 0.9), 
+                    2.2275298823em 0.7518284507em 8px rgba(255, 0, 179, 0.9), 
+                    0.531060769em 0.0454968001em 8px rgba(70, 255, 0, 0.9), 
+                    0.7754218743em 0.1865908353em 8px rgba(255, 0, 22, 0.9), 
+                    -0.074992221em 0.2304108976em 8px rgba(255, 113, 0, 0.9), 
+                    2.3153191312em 0.827053515em 8px rgba(255, 0, 86, 0.9), 
+                    0.6358857905em 2.3076750622em 8px rgba(41, 0, 255, 0.9), 
+                    0.6864423396em 1.2322504328em 8px rgba(33, 0, 255, 0.9), 
+                    2.3522027069em 2.1485611069em 8px rgba(0, 11, 255, 0.9), 
+                    1.6757882659em 0.2929433549em 8px rgba(0, 255, 246, 0.9), 
+                    2.0225281416em -0.449923273em 8px rgba(255, 45, 0, 0.9), 
+                    2.2060219866em 1.7416741972em 8px rgba(177, 255, 0, 0.9), 
+                    1.0201072823em 0.1886677324em 8px rgba(182, 0, 255, 0.9), 
+                    2.2924392637em 0.627193789em 8px rgba(83, 0, 255, 0.9), 
+                    -0.1154145108em 2.3938325998em 8px rgba(255, 34, 0, 0.9), 
+                    0.0614131195em -0.1373280743em 8px rgba(255, 0, 227, 0.9), 
+                    2.3850395197em 0.7372931023em 8px rgba(191, 0, 255, 0.9), 
+                    0.6793092893em 1.4648207561em 8px rgba(0, 255, 56, 0.9), 
+                    1.3375364773em 1.0985133491em 8px rgba(0, 241, 255, 0.9), 
+                    1.4848549265em 0.7231743086em 8px rgba(255, 0, 35, 0.9), 
+                    1.9717912385em 1.7215408981em 8px rgba(69, 0, 255, 0.9), 
+                    1.7625644654em 1.6025971533em 8px rgba(200, 0, 255, 0.9), 
+                    -0.332848125em -0.4418547406em 8px rgba(0, 255, 63, 0.9), 
+                    1.5509704186em 0.0596904295em 8px rgba(0, 255, 117, 0.9), 
+                    -0.4915867045em 1.5590459517em 8px rgba(255, 0, 219, 0.9), 
+                    1.3808864939em 1.518818918em 8px rgba(0, 255, 112, 0.9);
+                animation-duration: 42s;
+                animation-delay: -23s;
+            }
+            head::after {
+                /* compiled scss */
+                /* @include dots(40); */
+                text-shadow: 
+                    1.1034508971em 0.6760652522em 8px rgba(0, 37, 255, 0.9),
+                    1.6061243241em 0.7194522021em 8px rgba(131, 255, 0, 0.9),
+                    2.345954888em 0.5533805773em 8px rgba(255, 9, 0, 0.9), 
+                    0.9397508384em 2.3225856584em 8px rgba(255, 0, 149, 0.9), 
+                    -0.3187709693em 0.273032543em 8px rgba(51, 0, 255, 0.9), 
+                    0.7707965207em 0.7105480619em 8px rgba(255, 0, 159, 0.9), 
+                    -0.2683334696em 0.6809650321em 8px rgba(0, 255, 249, 0.9), 
+                    0.3606626951em -0.3370013597em 8px rgba(18, 255, 0, 0.9), 
+                    1.8793041397em 0.4405183026em 8px rgba(172, 0, 255, 0.9), 
+                    0.3801393008em 0.4918264795em 8px rgba(45, 255, 0, 0.9), 
+                    -0.1581402956em 0.1485758083em 8px rgba(0, 13, 255, 0.9), 
+                    -0.3477207741em -0.3379396219em 8px rgba(255, 136, 0, 0.9), 
+                    -0.0411190145em 0.7841320131em 8px rgba(244, 0, 255, 0.9), 
+                    1.5726516445em 0.6329128785em 8px rgba(30, 255, 0, 0.9), 
+                    1.7763192467em -0.0793474812em 8px rgba(255, 118, 0, 0.9), 
+                    2.4196377225em 2.3197584522em 8px rgba(0, 255, 38, 0.9), 
+                    -0.1734375866em 0.098507208em 8px rgba(73, 255, 0, 0.9), 
+                    0.4257681687em 2.2541540593em 8px rgba(0, 135, 255, 0.9), 
+                    2.3043838372em 0.9477230322em 8px rgba(0, 37, 255, 0.9), 
+                    0.427350008em 2.2429277916em 8px rgba(0, 219, 255, 0.9), 
+                    0.778482081em 0.2022290765em 8px rgba(255, 2, 0, 0.9), 
+                    0.6190681674em 1.8087001809em 8px rgba(255, 0, 185, 0.9), 
+                    0.8219450705em 2.4669070574em 8px rgba(94, 0, 255, 0.9), 
+                    -0.3927548028em -0.017634176em 8px rgba(39, 0, 255, 0.9), 
+                    0.72471843em -0.0635788489em 8px rgba(255, 0, 245, 0.9), 
+                    0.386652012em -0.432779337em 8px rgba(215, 255, 0, 0.9), 
+                    2.2326817037em -0.4204174747em 8px rgba(183, 255, 0, 0.9), 
+                    0.5522665069em 1.7957565811em 8px rgba(255, 0, 11, 0.9), 
+                    1.5050043782em 1.6472513258em 8px rgba(255, 0, 59, 0.9), 
+                    0.7062835058em 1.7698717063em 8px rgba(255, 102, 0, 0.9), 
+                    1.3999847581em 1.8968210812em 8px rgba(255, 0, 171, 0.9), 
+                    0.0613212586em 1.8539899648em 8px rgba(0, 255, 102, 0.9), 
+                    -0.1395373264em 0.9829418746em 8px rgba(0, 255, 161, 0.9), 
+                    1.0714563848em 1.6231201632em 8px rgba(255, 184, 0, 0.9), 
+                    -0.4108928416em 1.0165254812em 8px rgba(0, 255, 63, 0.9), 
+                    1.6310602736em 1.3193611298em 8px rgba(0, 255, 4, 0.9), 
+                    0.1579215394em -0.3996294513em 8px rgba(34, 0, 255, 0.9), 
+                    0.6156576536em 0.7858744303em 8px rgba(255, 0, 148, 0.9), 
+                    1.8813241075em 2.1905711787em 8px rgba(255, 70, 0, 0.9), 
+                    0.6757125403em 0.6521593523em 8px rgba(255, 159, 0, 0.9), 
+                    1.92255141em 1.3264835998em 8px rgba(255, 237, 0, 0.9);
+                animation-duration: 41s;
+                animation-delay: -19s;
+            }
+            @keyframes move {
+                from {
+                    transform: rotate(0deg) scale(12) translateX(-20px);
+                }
+                to {
+                    transform: rotate(360deg) scale(18) translateX(20px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <br/>
+        <div class="main">
+            <div class="content">
+                <center>
+                    <h3 id="condensed">Career Paths:</h3>
+                    <h1 id="main-heading">Webmaster</h1>
+                    <img width="100%" style="border-radius: 15px;" src="images/christina-un.jpg" alt="guy managing a wordpress server"/>
+                    <!-- DEFINITION SECTION -->
+                    <h4 id="condensed">Definition</h4>
+                    <p>
+                        A webmaster is someone who creates and manages the content on a website, or manages the computer server and technical programming aspects of a website, or does both.
+                    </p>
+                    <!-- REQUIREMENT SECTION -->
+                    <h4 id="condensed">Requirements</h4>
+                    <ul>
+                        <li>
+                            <i class="devicon-apachespark-original"></i> 
+                            Proven experience as a Webmaster or Web Developer
+                        </li>
+                        <li>
+                            <i class="devicon-apachespark-original"></i> 
+                            Knowledge of web analytics and SEO
+                        </li>
+                        <li>
+                            <i class="devicon-apachespark-original"></i> 
+                            Familiarity with web standards
+                        </li>
+                        <li>
+                            <i class="devicon-apachespark-original"></i> 
+                            Working knowledge of website management tools
+                        </li>
+                        <li>
+                            <i class="devicon-apachespark-original"></i> 
+                            Proficient in HTML/CSS, XML, SQL, and Javascript
+                        </li>
+                        <li>
+                            <i class="devicon-apachespark-original"></i>
+                            Strong troubleshooting and analytical abilities
+                        </li>
+                        <li>
+                            <i class="devicon-apachespark-original"></i> 
+                            Excellent communication and teamwork skills
+                        </li>
+                        <li>
+                            <i class="devicon-apachespark-original"></i> 
+                            Ability to generate creative ideas
+                        </li>
+                        <li>
+                            <i class="devicon-apachespark-original"></i> 
+                            Attention to detail
+                        </li>
+                        <li>
+                            <i class="devicon-apachespark-original"></i> 
+                            Organizational skills
+                        </li>
+                        <li>
+                            <i class="devicon-apachespark-original"></i> 
+                            Bachelor of Science or Bachelor of Arts in Computer Science, Design or a related field
+                        </li>
+                    </ul>
+                    <!-- SALARY SECTION -->
+                    <h4 id="condensed">Salary</h4>
+                    <p>
+                        The median annual salary is 
+                        <i alt="&#163;68,980">$87,800</i>. 
+                        Salary generally increases annually. The lowest annual salary is 
+                        <i alt="&#163;53,220">$67,740</i> 
+                        and the highest is 
+                        <i alt="&#163;87,141">$110,916</i>. 
+                        Education makes a slight difference in salary.
+                    </p>
+                    <br>
+                    <!-- BREIFING SECTION -->
+                    <h4 id="condensed">Responsibilies & Type of Work
+                    </h4>
+                    <p>
+                        Webmastering usually takes a day of required work. A webmastering job can be found in a lot of cities like 
+                        <em>Carmel, Indiana </em>
+                        from 
+                        <em>Arlington, Virginia</em> 
+                        and many more. This job or career is mostly done indoors because it deals with computers and 
+                        <u>
+                            <i alt="nginx is a web host used widely across the internet">
+                                nginx
+                            </i>
+                        </u>
+                        servers.
+                    </p>
+                </center>
+            </div>
+        </div>
+        <br/>
+    </body>
+</html>
